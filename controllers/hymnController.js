@@ -28,7 +28,7 @@ exports.fetchAllHymns = function (res) {
 
 //GET by id
 exports.fetchHymnById = function (req, res) {
-    Hymn.findById(req.params.id, function (error) {
+    Hymn.findById(req.params.id, function (error, hymn) {
         if(error) {
             return next(error);
         }
@@ -43,5 +43,15 @@ exports.updateHymnById = function (req, res) {
             return next(error);
         }
         res.send('Hymn updated successfully');
+    });
+};
+
+//DELETE hymn by id
+exports.deleteHymnById = function (req, res) {
+    Hymn.findByIdAndRemove(req.params.id, function (error) {
+        if(error) {
+            return next(error);
+        }
+        res.send('Hymn deleted successfully');
     });
 };

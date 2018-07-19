@@ -7,5 +7,6 @@ router.post('/create', hymnController.createHymn);
 router.get('', hymnController.fetchAllHymns);
 router.get('/:id', hymnController.fetchHymnById);
 router.put('/:id', hymnController.updateHymnById);
+router.delete('/:id', hymnController.deleteHymnById);
 
 module.exports = router;
