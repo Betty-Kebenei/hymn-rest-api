@@ -6,4 +6,4 @@ let HymnSchema = new Schema({
     stanzas: {type: String, required: true}
 });
 
-module.exports = momgoose.model('Hymn', HymnSchema)
+module.exports = mongoose.model('Hymn', HymnSchema)
