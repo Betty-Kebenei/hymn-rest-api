@@ -9,11 +9,10 @@ mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.log.bind(console, 'MongoDb connection error:'));
 
-const hymn = require('./routes/hymn.route');
+const hymn = require('./routes/hymnRoutes');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
 app.use('/hymns', hymn)
 
 let port = 3002;
