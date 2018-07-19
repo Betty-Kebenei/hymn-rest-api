@@ -1,0 +1,26 @@
+{
+  "name": "hymn-app",
+  "version": "1.0.0",
+  "description": "This is a REST API for the Hymn Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hymn-rest-api"
+  },
+  "keywords": [
+    "node",
+    "hymn",
+    "REST",
+    "API"
+  ],
+  "author": "Betty",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4"
+  }
+}
