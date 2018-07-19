@@ -28,10 +28,20 @@ exports.fetchAllHymns = function (res) {
 
 //GET by id
 exports.fetchHymnById = function (req, res) {
-    Hymn.findById(req.params.id, function (error, hymn) {
+    Hymn.findById(req.params.id, function (error) {
         if(error) {
             return next(error);
         }
         res.send(hymn);
+    });
+};
+
+//UPDATE hymn by id
+exports.updateHymnById = function (req, res) {
+    Hymn.findByIdAndUpdate(req.params.id, {$set: req.body}, function (error) {
+        if(error) {
+            return next(error);
+        }
+        res.send('Hymn updated successfully');
     });
 };
