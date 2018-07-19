@@ -13,6 +13,7 @@ const hymn = require('./routes/hymn.route');
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use('/hymns', hymn)
 
 let port = 3002;

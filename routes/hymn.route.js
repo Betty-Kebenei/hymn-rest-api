@@ -3,6 +3,6 @@ const router = express.Router();
 
 const hymn_controller = require('../controllers/hymn.controller');
 
-router.get('/test', hymn_controller.test);
+router.post('/create', hymn_controller.createHymn);
 
 module.exports = router;
