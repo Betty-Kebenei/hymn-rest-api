@@ -1,4 +1,4 @@
-const Hymn = require('../models/hymn.model');
+const Hymn = require('../models/hymnModel');
 
 
 //POST a hymn
