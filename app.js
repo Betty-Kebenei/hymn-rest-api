@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 let db_url = process.env.DB_URL;
 let mongoDB = process.env.MONGODB_URI || db_url;
@@ -12,6 +13,7 @@ db.on('error', console.log.bind(console, 'MongoDb connection error:'));
 const hymn = require('./routes/hymnRoutes');
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/hymns', hymn)
 
